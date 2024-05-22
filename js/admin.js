@@ -14,6 +14,9 @@ fetch(server+"isadmin",{
     }
     xhr.onload = () => {
         if (xhr.status == 200) {
+            document.querySelectorAll("comment__item").forEach(element => {
+                element.innerHTML+='<div class="delete-comment"></div>'
+            });
             document.querySelectorAll(".delete-comment").forEach(element => {
                 element.onclick = ()=>{
                     if (confirm("Удалить комментарий?")){
