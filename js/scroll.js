@@ -9,3 +9,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
     });
 });
+document.querySelector(".concert__btn").onclick = ()=>{
+    alert("Ты рофлишь? реально на концерт не плутоне поедешь?")
+}
