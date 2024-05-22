@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/layout/logo.svg" type="image/x-icon">
+    <script src="js/scroll.js" defer></script>
+    <script src="js/cookie.js" defer></script>
+    <script src="js/admin.js" defer></script>
+    <script src="js/login.js" defer></script>
+    <script src="js/leavecomments.js" defer></script>
+</head>
+<body>
+    <div class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__wrapper">
+            <div class="modal__top">
+                <div id="login-option">вход</div>
+                <div id="registration-option">регистрация</div>
+                <div class="modal__top__value"></div>
+            </div>
+            <form class="modal__bottom">
+                <label for="login-input">Логин</label>
+                <input type="text" placeholder="Логин" id="login-input" required>
+                <label for="password-input">Пароль</label>
+                <input type="password" placeholder="Пароль" id="password-input" required>
+                <button type="submit" class="modal__bottom__btn btn" id="logbutton">войти</button>
+                <button type="submit" class="modal__bottom__btn btn" id="regbutton">зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+    <header>
+        <a href="#concert" class="header__navigation mini" href="">Концерты</a>
+        <a href="#links" class="header__navigation mini" href="">Ссылки</a>
+        <a href="#main" class="header__navigation logo">
+            <img src="img/layout/logo.svg" alt="">
+        </a>
+        <a href="#merch" class="header__navigation mini" href="">Мерч</a>
+        <a href="#media" class="header__navigation mini" href="">Медиа</a>
+        <img src="img/icons/user.svg" alt="" id="login">
+    </header>
+    <main id="main">
+        <section class="video" id="concert">
+            <video src="img/layout/video.MP4" autoplay muted></video>
+            <div class="concert__announcement">
+                <div class="concert__date">
+                    плутон, 35 Мидинваэрне (74:00)
+                </div>
+                <h2>сольный концерт</h2>
+                <button class="btn concert__btn">купить билеты</button>
+            </div>
+            <div class="bottom__gradient"></div>
+        </section>
+        <section id="links">
+            <div class="decoration">
+                <div class="decoration__item">
+                    <div class="decoration__glow"></div>
+                    <img src="img/layout/planet.svg" alt="">
+                </div>
+                <div class="decoration__item">
+                    <div class="decoration__glow"></div>
+                    <img src="img/layout/wall.svg" alt="">
+                </div>
+            </div>
+            <h2>ищи меня в соц. сетях</h2>
+            <div class="social">
+                <a href="https://www.tiktok.com/@vanya_dmitrienkoo" class="social__item btn" id="tiktok">
+                    <img src="img/social/tiktok.svg" alt="">
+                    <div class="social__item__text" >TikTok</div>
+                </a>
+                <a href="https://www.youtube.com/@VanyaDmitrienko" class="social__item btn" id="youtube">
+                    <img src="img/social/youtube.svg" alt="">
+                    <div class="social__item__text" >YouTube</div>
+                </a>
+                <a href="https://www.instagram.com/dmitrienko_vanya" class="social__item btn" id="instagram">
+                    <img src="img/social/instagram.svg" alt="">
+                    <div class="social__item__text" >Instaram</div>
+                </a>
+                <a href="https://vk.com/dmitrienko_vanya" class="social__item btn" id="vk">
+                    <img src="img/social/vk.svg" alt="">
+                    <div class="social__item__text" >ВКонтакте</div>
+                </a>
+                <a href="https://t.me/vaneckavanushka" class="social__item btn" id="telegram">
+                    <img src="img/social/telegram.svg" alt="">
+                    <div class="social__item__text" >Telegram</div>
+                </a>
+                <a href="https://rutube.ru/u/VanyaDmitrienko/" class="social__item btn" id="rutube">
+                    <img src="img/social/rutube.svg" alt="">
+                    <div class="social__item__text" >RuTube</div>
+                </a>
+            </div>
+        </section>
+        <section id="merch">
+            <h2>Мерч</h2>
+            <div class="merch__container">
+                <div class="merch__item">
+                    <div class="merch__item__img">
+                        <div class="soldout">
+                            Распродано
+                        </div>
+                        <img src="img/merch/hoody.png" alt="">
+                    </div>
+                    <h3 class="merch__item__name">Худи</h3>
+                </div>
+                <div class="merch__item">
+                    <div class="merch__item__img">
+                        <div class="soldout">
+                            Распродано
+                        </div>
+                        <img src="img/merch/tshirt.png" alt="">
+                    </div>
+                    <h3 class="merch__item__name">футболка</h3>
+                </div>
+                <div class="merch__item">
+                    <div class="merch__item__img">
+                        <div class="soldout">
+                            Распродано
+                        </div>
+                        <img src="img/merch/sweater.png" alt="">
+                    </div>
+                    <h3 class="merch__item__name">свитер</h3>
+                </div>
+            </div>
+        </section>
+        <section id="media">
+            <div class="container">
+                <h2>Медиа</h2>
+                <h3>топ треков</h3>
+                <div class="tracks">
+                    <div class="track__item">
+                        <img src="img/tracks/nepred.png" alt="">
+                        <div class="track__item__name">
+                            не представляешь
+                        </div>
+                        <div class="track__item__author">
+                            5утра/ваня дмитриенко
+                        </div>
+                    </div>
+                    <div class="track__item">
+                        <img src="img/tracks/venjup.png" alt="">
+                        <div class="track__item__name">
+                            венера-юпитер
+                        </div>
+                        <div class="track__item__author">
+                            ваня дмитриенко
+                        </div>
+                    </div>
+                    <div class="track__item">
+                        <img src="img/tracks/lego.png" alt="">
+                        <div class="track__item__name">
+                            лего
+                        </div>
+                        <div class="track__item__author">
+                            ваня дмитриенко
+                        </div>
+                    </div>
+                </div>
+                <h3>видеоКлип</h3>
+                <iframe id="videoclip" width="1280" height="720" src="https://www.youtube.com/embed/SAMlcy92agM" title="5УТРА, Ваня Дмитриенко - Не представляешь (ПРЕМЬЕРА КЛИПА)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section class="comments">
+            <div class="container">
+                <h3>Комментарии</h3>
+                <div class="container">
+                    <div class="add-comment">
+                        <img src="img/icons/user.svg" alt="">
+                        <textarea name="" id="add__comment__input" placeholder="Введите комментарий"></textarea>
+                        <div class="btn comment-btn">Оставить комментарий</div>
+                    </div>
+                    <div class="comment-section">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer__item">
+                Концерты и реклама Ваня Дмитриенко:<br>
+                +7 (977) 955-95-11 - Елизавета
+            </div>
+            <div class="footer__item">
+                PR / Promo Ваня Дмитриенко:<br>
+                +7 (962) 974-45-70 Ирина
+            </div>
+            <div class="footer__item">
+                © 2024 Ваня Дмитриенко
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
