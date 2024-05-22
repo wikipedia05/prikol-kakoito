@@ -56,7 +56,7 @@ fetch(server+"isadmin",{
         }
     };
     
-    xhr.open("get",`${server}getcomments`)
+    xhr.open("get",server+getcomments)
     xhr.send();
 });
 
