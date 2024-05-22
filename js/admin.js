@@ -14,21 +14,6 @@ fetch(server+"isadmin",{
     }
     xhr.onload = () => {
         if (xhr.status == 200) {
-            JSON.parse(xhr.responseText).data.forEach(comment => {
-                document.querySelector(".comment-section").innerHTML += `<div class="comment__item">
-                    <img src="img/icons/user.svg" alt="" class="user-pic">
-                    <div class="comment__item__content">
-                        <div class="comment__item__author">
-                            ${comment.login}
-                        </div>
-                        <div class="comment__item__text">
-                            ${comment.text}
-                        </div>
-                    </div>
-                    ${isadmin?'<div class="delete-comment"></div>':""}
-                </div>
-                `
-            });
             document.querySelectorAll(".delete-comment").forEach(element => {
                 element.onclick = ()=>{
                     if (confirm("Удалить комментарий?")){
@@ -53,19 +38,31 @@ fetch(server+"isadmin",{
             console.log("Server response: ", xhr.statusText);
         }
     };
-    xhr.open("get",`${server}getcomments`)
+    xhr.open("get",${server}getcomments)
     xhr.send();
 })
 
-// xhr.onload = () => {
-           
-//     if (xhr.status == 200) {   
-//           console.log(xhr.responseText);
-//     } else {                               
-//         console.log("Server response: ", xhr.statusText);
-//     }
-// };
-// token = getCookie("token")
-// xhr.open("POST", `${server}isadmin`);
-// xhr.setRequestHeader("Content-Type", "application/json");
-// xhr.send(JSON.stringify({"token":token}));
+xhr.onload = () => {
+    if (xhr.status == 200) {
+        JSON.parse(xhr.responseText).data.forEach(comment => {
+            document.querySelector(".comment-section").innerHTML += `<div class="comment__item">
+                <img src="img/icons/user.svg" alt="" class="user-pic">
+                <div class="comment__item__content">
+                    <div class="comment__item__author">
+                        ${comment.login}
+                    </div>
+                    <div class="comment__item__text">
+                        ${comment.text}
+                    </div>
+                </div>
+                ${isadmin?'<div class="delete-comment"></div>':""}
+            </div>
+            `
+        });
+        
+    } else {                               
+        console.log("Server response: ", xhr.statusText);
+    }
+};
+xhr.open("get",${server}getcomments)
+xhr.send();
