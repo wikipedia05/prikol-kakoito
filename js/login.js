@@ -41,7 +41,7 @@ function changemode(){
 document.querySelector(".modal__bottom").onsubmit = (e)=>{
     e.preventDefault()
     login = document.querySelector("#login-input").value.toLowerCase()
-    password = document.querySelector("#login-input").value
+    password = document.querySelector("#password-input").value
     if (mode == 0){
         xhr.open("POST", `${server}login`);
         xhr.onload = () => {
