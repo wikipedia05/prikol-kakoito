@@ -64,6 +64,22 @@ section{
     height: 100%;
 }
 
+#roller_welcome{
+    font-size: 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: #0000006b;
+
+}
+
+#roller_welcome_caps{
+    font-size: 65px;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: #0000006b;
+
+}
+
 .concert__announcement{
     z-index: 5;
     position: absolute;
@@ -230,6 +246,41 @@ position: relative;
 }
 
 .roller__text{
+    top: 50%;
+    right: 30px;
+    position: absolute;
+    background-color: #000000ca;
+    height: 65%;
+    transform: translateY(-50%);
+    width: 50%;
+    font-size: 26px;
+    padding: 15px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.roller__container__2{
+    padding: 20px 0;
+    margin: 20px 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background: linear-gradient(180deg, #000000 0%, #7de1d5 50%, #000000 100%);
+}
+
+.roller__img__2{
+position: relative;
+}
+
+.roller__img__2 img{
+    width: 900px;
+    height: 600px;
+}
+
+.roller__text__2{
     top: 50%;
     right: 30px;
     position: absolute;
